@@ -47,3 +47,14 @@ const config = {
 };
 
 export const system = createSystem(defaultConfig, config);
+
+Object.defineProperty(global, 'import', {
+  value: {
+    meta: {
+      env: {
+        VITE_API_KEY: 'mock-api-key',
+      },
+    },
+  },
+  writable: true,
+});

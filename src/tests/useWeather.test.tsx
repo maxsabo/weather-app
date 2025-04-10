@@ -1,6 +1,6 @@
 import { renderHook, act } from '@testing-library/react';
 import axios from 'axios';
-// import  { AxiosError, AxiosHeaders } from 'axios';
+// import { AxiosError, AxiosHeaders } from 'axios';
 import { useWeather } from '../hooks/useWeather';
 import { WeatherData } from '../types/weather';
 
@@ -17,7 +17,7 @@ describe('useWeather', () => {
   beforeEach(() => {
     jest.clearAllMocks();
     localStorage.clear();
-    process.env.VITE_API_KEY = 'mock-api-key';
+    // process.env.VITE_API_KEY = 'mock-api-key';
   });
 
   it('fetches weather data successfully', async () => {
@@ -34,10 +34,6 @@ describe('useWeather', () => {
     expect(result.current.weather).toEqual(mockWeather);
     expect(result.current.error).toBe(null);
   });
-
-  // Note: Next test is commented out due to issues with mocking AxiosError in Jest.
-  // Despite multiple attempts, axios.isAxiosError did not recognize the mock as a valid AxiosError.
-  // The functionality works in the actual app, but I can't implement this test reliably :(
 
   // it('handles error when city not found', async () => {
   //   (axios.get as jest.Mock).mockImplementation(() => {
