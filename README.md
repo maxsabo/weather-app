@@ -36,7 +36,7 @@ Note: One test (`"handles error when city not found"` in `useWeather.test.tsx`) 
 - `npm test`: Run unit tests.
 
 ## Deployment
-The app is deployed at: [Insert deployment URL here after publishing].
+The app is deployed at: [(https://weather-app-alpha-orpin-80.vercel.app/)].
 
 ## Technologies
 - **React**: Frontend library.
